@@ -9,6 +9,12 @@ int main(){
     for(int i = 0; i < 4; i++){
         printf("Nota %d: ", i+1);
         scanf("%f", &n[i]);
+
+        while (n[i] < 0 || n[i] > 10){
+            printf("Nota inválida, tente novamente! \nNota %d: ", i);
+            scanf("%f", &n[i]);
+        }
+        
         soma += n[i];
     }
     
